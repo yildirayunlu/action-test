@@ -63,7 +63,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: sleep
+      - name: fail
         continue-on-error: true
         run: |
           asdasdas
