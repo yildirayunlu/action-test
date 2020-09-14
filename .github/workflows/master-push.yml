@@ -55,6 +55,6 @@ jobs:
         continue-on-error: true
         run: |
           asdasdas
-      - name: sleep
+      - name: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
         run: |
           sleep 1m
