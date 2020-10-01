@@ -21,7 +21,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: sleep
         run: |
-          sleep 1m
+          sleep 3m
+      - name: sleep
+        run: |
+          sleep 2m
   dummyjob:
     runs-on: ubuntu-latest
 
@@ -55,6 +58,6 @@ jobs:
         continue-on-error: true
         run: |
           asdasdas
-      - name: sleep
+      - name: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
         run: |
           sleep 1m
