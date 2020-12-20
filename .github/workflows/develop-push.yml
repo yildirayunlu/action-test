@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: test
-        run: cd awesome-app && npm t
+        run: cd awesome-app && npmi && npm t
 
   apiandbackoffice:
     runs-on: ubuntu-latest
