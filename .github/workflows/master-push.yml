@@ -37,7 +37,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           
       - name: Send custom variable to Meercode Build
-        uses: meercodeio/meercode-custom-variable@0.0.1
+        uses: meercodeio/meercode-custom-variable@0.0.2
         with:
           meercode-token: ${{ secrets.MEERCODE_TOKEN }}
           url: "https://meercode.io/test"
