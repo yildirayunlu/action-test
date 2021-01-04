@@ -39,7 +39,7 @@ jobs:
         run: |
           sleep 30s
       - name: Send custom variable to Meercode Build
-        uses: meercodeio/meercode-custom-variable@0.0.5
+        uses: meercodeio/meercode-custom-variable@0.1.0
         with:
           meercode-token: ${{ secrets.MEERCODE_TOKEN }}
           url: "https://meercode.io/test"
