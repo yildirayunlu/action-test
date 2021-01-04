@@ -35,9 +35,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          
+      - name: Send custom variable to Meercode Build
+        uses: meercodeio/meercode-custom-variable@0.0.1
+        with:
+          meercode-token: ${{ secrets.MEERCODE_TOKEN }}
+          url: "https://meercode.io/test"
+
       - name: sleep
         run: |
           sleep 30s
+
   dummyjobWithFailStepButOk:
     runs-on: ubuntu-latest
 
