@@ -19,9 +19,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: sleep 1m
+      - name: sleep 3m
         run: |
-          sleep 1m
+          sleep 3m
   dummyjob:
     runs-on: ubuntu-latest
 
@@ -38,6 +38,12 @@ jobs:
       - name: sleep
         run: |
           sleep 30s
+      - name: Send custom variable to Meercode Build
+        uses: meercodeio/meercode-custom-variable@0.0.3
+        with:
+          meercode-token: ${{ secrets.MEERCODE_TOKEN }}
+          url: "https://meercode.io/test"
+
   dummyjobWithFailStepButOk:
     runs-on: ubuntu-latest
 
