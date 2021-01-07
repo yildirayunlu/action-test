@@ -42,7 +42,7 @@ jobs:
         uses: meercodeio/meercode-custom-variable@0.1.0
         with:
           meercode-token: ${{ secrets.MEERCODE_TOKEN }}
-          url: "https://meercode.io/test"
+          url: "https://trello.com/c/GLi8iOhs/546-nas%C4%B1l-g%C3%B6r%C3%BCn%C3%BCyora-t%C4%B1klad%C4%B1ktan-sonra-boy-ve-kilo-yan-yana-2-defa-yaz%C4%B1l%C4%B1-arad%C4%B1%C4%9F%C4%B1m-ili%C5%9Fki-t%C3%BCr%C3%BC-g%C3%B6r%C3%BCnm%C3%BCyor"
 
   dummyjobWithFailStepButOk:
     runs-on: ubuntu-latest
