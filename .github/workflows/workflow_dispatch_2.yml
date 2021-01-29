@@ -16,9 +16,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: sleep 30s
+      - name: sleep 10s
         run: |
-          sleep 30s
+          sleep 10s
   dummyjob:
     runs-on: ubuntu-latest
 
@@ -34,7 +34,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: sleep
         run: |
-          sleep 30s
+          sleep 10s
       - name: Send custom variable to Meercode Build
         uses: meercodeio/meercode-custom-variable@0.1.0
         with:
@@ -60,4 +60,4 @@ jobs:
           asdasdas
       - name: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
         run: |
-          sleep 30s
+          sleep 10s
