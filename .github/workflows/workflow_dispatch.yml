@@ -1,0 +1,63 @@
+name: Workflow Dispatch
+
+on: workflow_dispatch
+
+jobs:
+  apiandbackoffice:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: sleep 3m
+        run: |
+          sleep 3m
+  dummyjob:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: sleep
+        run: |
+          sleep 30s
+      - name: Send custom variable to Meercode Build
+        uses: meercodeio/meercode-custom-variable@0.1.0
+        with:
+          meercode-token: ${{ secrets.MEERCODE_TOKEN }}
+          url: "https://trello.com/c/GLi8iOhs/546-nas%C4%B1l-g%C3%B6r%C3%BCn%C3%BCyora-t%C4%B1klad%C4%B1ktan-sonra-boy-ve-kilo-yan-yana-2-defa-yaz%C4%B1l%C4%B1-arad%C4%B1%C4%9F%C4%B1m-ili%C5%9Fki-t%C3%BCr%C3%BC-g%C3%B6r%C3%BCnm%C3%BCyor"
+
+  dummyjobWithFailStepButOk:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: fail
+        continue-on-error: true
+        run: |
+          asdasdas
+      - name: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        run: |
+          sleep 30s
