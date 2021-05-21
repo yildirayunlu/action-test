@@ -55,7 +55,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: fail
-        continue-on-error: true
         run: |
           asdasdas
       - name: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
