@@ -16,9 +16,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: sleep 300s
+      - name: sleep 3600s
         run: |
-          sleep 300s
+          sleep 3600s
   dummyjob:
     runs-on: ubuntu-latest
 
